@@ -1,6 +1,6 @@
 
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
@@ -11,9 +11,9 @@ const loader = document.querySelector(".loader");
 const gallery = document.querySelector(".gallery");
 
 
-const lightbox = new SimpleLightbox('.gallery a', {
+const lightbox = new SimpleLightbox(".gallery a", {
   captionDelay: 250,
-  captionsData: 'alt',
+  captionsData: "alt",
   close: true,
   enableKeyboard: true,
   docClose: true,
@@ -87,15 +87,15 @@ function fetchImages(query) {
       `;
     }, '');
 
-    gallery.insertAdjacentHTML('beforeend', galleryHTML);
+    gallery.insertAdjacentHTML("beforeend", galleryHTML);
     lightbox.refresh(); 
   } else {
     iziToast.error({
-                        messageColor: 'rgb(255, 255, 255)',
-                        backgroundColor: 'red',
-                        timeout:'3000',
-                        message: 'Sorry, there are no images matching your search query. Please try again.',
-                        position: 'center',
+                        messageColor: "rgb(255, 255, 255)",
+                        backgroundColor: "red",
+                        timeout:"3000",
+                        message: "Sorry, there are no images matching your search query. Please try again.",
+                        position: "center",
                 });
     };
 };
