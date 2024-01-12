@@ -5,18 +5,26 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vanilla App Template</title>
+  <title>Gallery from API</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Open+Sans:wght@300;400&display=swap"
+    rel="stylesheet">
   
   <script type="module" crossorigin src="/vanilla-app-template/commonHelpers.js"></script>
-  <link rel="stylesheet" href="/vanilla-app-template/assets/index-e3b0c442.css">
+  <link rel="modulepreload" crossorigin href="/vanilla-app-template/assets/vendor-46aac873.js">
+  <link rel="stylesheet" href="/vanilla-app-template/assets/vendor-eb6030bc.css">
+  <link rel="stylesheet" href="/vanilla-app-template/assets/index-8753f7a9.css">
 </head>
 
 <body>
   <form name="search_form" class="form">
-    <input type="text" name="key_word" placeholder="Search images..." class="search-input">
+    <input type="text" placeholder="Search images..." class="search-input" required>
     <button type="submit" class="btn">Search</button>
   </form>
-  <span class="loader"></span>
+
+  <div class="loader hidden"></div>
   <ul class="gallery"></ul>
 
   
