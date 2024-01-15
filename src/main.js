@@ -23,6 +23,14 @@ formEl.addEventListener("submit", (event) => {
   const query = searchInput.value.trim();
 
   if (!query) {
+    iziToast.info({
+      messageColor: 'rgb(255, 255, 255)',
+      backgroundColor: 'blue',
+      timeout: '5000',
+      message: "Please fill out search field",
+      position: 'bottomRight',
+    });
+    
     return;
   }
 
@@ -34,7 +42,14 @@ formEl.addEventListener("submit", (event) => {
     .then(({ hits }) => {
       renderGallery(hits);
     })
-    .catch((error) => console.log(error))
+    .catch((error) => iziToast.error({
+      title: 'Error',
+      messageColor: 'rgb(255, 255, 255)',
+      backgroundColor: 'red',
+      timeout: '5000',
+      message: "Something went wrong",
+      position: 'center',
+    }))
     .finally(() => { loader.classList.add("hidden") }); 
 });
 
